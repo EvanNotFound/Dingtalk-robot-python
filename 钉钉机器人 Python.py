@@ -46,7 +46,7 @@ def dingmessage():
 #对请求的数据进行json封装
     message_json = json.dumps(message)
 #发送请求
-    info = requests.post(url=webhook+timestamp+"&sign="+sign,data=message_json,headers=header)
+    info = requests.post(url=webhook+"&timestamp="+timestamp+"&sign="+sign,data=message_json,headers=header)
 #打印返回的结果
     print(info.text)
 
